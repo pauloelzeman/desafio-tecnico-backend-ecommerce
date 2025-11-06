@@ -1,5 +1,4 @@
 -- Dump : Desafio técnico back-end pleno
--- Compatível com MySQL 8.0+
 
 CREATE DATABASE IF NOT EXISTS desafio_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE desafio_db;
@@ -94,16 +93,4 @@ VALUES (UUID_TO_BIN(UUID()),
         (SELECT id FROM users WHERE username = 'user' LIMIT 1),
     0.00, 'PENDENTE'
     );
-
--- ==========================================
--- Observações finais
--- ==========================================
--- Use UUID_TO_BIN() para gerar IDs binários em inserts.
--- As queries analíticas exigidas pelo desafio podem ser executadas
--- com base nessas tabelas e índices.
--- O estoque é atualizado pela aplicação após o pagamento.
--- Exemplos de inserções: as senhas são espaços reservados — gere o bcrypt no aplicativo ou substitua-o por hashes.
--- Para criar um usuário administrador por meio do aplicativo, registre-o e atualize a função no banco de dados ou insira um usuário com um hash bcrypt.
--- Exemplos de UUIDs (substitua pelas funções UUID_TO_BIN(...) se desejar)
--- Você pode usar seu cliente MySQL para substituir UUIDs legíveis por humanos por binários, se necessário.
 

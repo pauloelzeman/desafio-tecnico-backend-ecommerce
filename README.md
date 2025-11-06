@@ -145,12 +145,3 @@ Authorization: Bearer <token>
 
 - **Repositório GitHub** contendo o código-fonte e o arquivo `dump.sql`.
 - Este README contém todas as instruções de configuração e uso.
-
----
-
-## 💡 Dica
-
-Após autenticação, use o **token JWT** retornado nos endpoints protegidos:
-```
-Authorization: Bearer <seu_token_aqui>
-```
