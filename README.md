@@ -129,6 +129,55 @@ Authorization: Bearer <token>
 | `GET /api/analytics/top5-users` | Retorna os 5 usuários que mais compraram |
 | `GET /api/analytics/avg-ticket` | Retorna o ticket médio dos pedidos por usuário |
 | `GET /api/analytics/revenue/{year}/{month}` | Retorna o faturamento total do mês especificado |
+**🔒 Todos os endpoints de Analytics exigem usuário ADMIN autenticado.**
+
+---
+
+## 🧪 Testes da API com Postman
+**🔹 1. Obtenha o Token JWT**
+
+**No Postman, envie:**
+
+POST http://localhost:8080/api/auth/login
+```json
+{
+"username": "admin",
+"password": "123456"
+}
+```
+
+Copie o campo token da resposta e adicione no Postman:
+
+Vá em Authorization → Type: Bearer Token
+
+Cole o token no campo.
+
+---
+
+**🔹 2. Teste os Endpoints**
+
+Após configurar o token, teste livremente:
+
+Produtos (/api/products) — CRUD completo.
+
+Pedidos (/api/orders) — criação e pagamento.
+
+Analytics (/api/analytics/...) — relatórios administrativos.
+
+---
+
+**🔹 3. Postman Collection**
+
+Uma coleção Postman pode ser importada diretamente para testar todos os endpoints:
+
+📁 Arquivo:
+/postman/desafio-ecommerce-collection.json
+
+Inclui também um ambiente Postman com:
+
+🔹{{baseUrl}} = http://localhost:8080
+
+🔹{{token}} = < JWT gerado >
 
 ---
 

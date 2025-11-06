@@ -1,0 +1,410 @@
+{
+	"info": {
+		"_postman_id": "d2095baa-b844-411d-a7fe-36c988e2319f",
+		"name": "Desafio Técnico - Desenvolvedor Back-End Pleno",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12393307"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/auth/register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"userteste\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0Mjc5Y2MyMC1iYTg3LTExZjAtYjUxMS0wMDE1NWRkYmUwOTYiLCJyb2xlIjoiUk9MRV9BRE1JTiIsImlhdCI6MTc2MjM3NTA2NCwiZXhwIjoxNzYyNDYxNDY0fQ.0n6iSkCHHMOIT7T8Q3eol-V1BQvz9XuVQvE8h-bUX6Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0Mjc5Y2MyMC1iYTg3LTExZjAtYjUxMS0wMDE1NWRkYmUwOTYiLCJyb2xlIjoiUk9MRV9BRE1JTiIsImlhdCI6MTc2MjM3NTI2NiwiZXhwIjoxNzYyNDYxNjY2fQ.22qLe1sqyIikf-kbOYMct6vw0wvB-FuUAJjEnMGSyAo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"name\": \"Camiseta Vermelha\",\r\n        \"description\": \"Camiseta 100% algodão\",\r\n        \"price\": 59.90,\r\n        \"category\": \"Roupas\",\r\n        \"quantity\": 200\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/products/b7d3c49d-be3d-4e6c-92b8-a24916e6ca68",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0Mjc5Y2MyMC1iYTg3LTExZjAtYjUxMS0wMDE1NWRkYmUwOTYiLCJyb2xlIjoiUk9MRV9BRE1JTiIsImlhdCI6MTc2MjM3NTI2NiwiZXhwIjoxNzYyNDYxNjY2fQ.22qLe1sqyIikf-kbOYMct6vw0wvB-FuUAJjEnMGSyAo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Camiseta Vermelha\",\r\n    \"description\": \"Camiseta 100% algodão\",\r\n    \"price\": 59.90,\r\n    \"category\": \"Roupas\",\r\n    \"quantity\": 300\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products/b7d3c49d-be3d-4e6c-92b8-a24916e6ca68",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"b7d3c49d-be3d-4e6c-92b8-a24916e6ca68"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/products/b7d3c49d-be3d-4e6c-92b8-a24916e6ca68",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0Mjc5Y2MyMC1iYTg3LTExZjAtYjUxMS0wMDE1NWRkYmUwOTYiLCJyb2xlIjoiUk9MRV9BRE1JTiIsImlhdCI6MTc2MjM3NTI2NiwiZXhwIjoxNzYyNDYxNjY2fQ.22qLe1sqyIikf-kbOYMct6vw0wvB-FuUAJjEnMGSyAo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products/b7d3c49d-be3d-4e6c-92b8-a24916e6ca68",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"b7d3c49d-be3d-4e6c-92b8-a24916e6ca68"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/orders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3OTU4ZDFhYy1iYTk4LTExZjAtYjUxMS0wMDE1NWRkYmUwOTYiLCJyb2xlIjoiUk9MRV9VU0VSIiwiaWF0IjoxNzYyMzgyNDcwLCJleHAiOjE3NjI0Njg4NzB9.AbxGE_OYLgx-kKKQy0xlqidh4eG_A5j6UrxVBDa3_5U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"items\": [\r\n    { \"productId\": \"795aa2c5-ba98-11f0-b511-00155ddbe096\",\r\n     \"quantity\": 2\r\n    },\r\n    { \"productId\": \"795aa5a8-ba98-11f0-b511-00155ddbe096\",\r\n      \"quantity\": 1\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/orders/my",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3OTU4ZDFhYy1iYTk4LTExZjAtYjUxMS0wMDE1NWRkYmUwOTYiLCJyb2xlIjoiUk9MRV9VU0VSIiwiaWF0IjoxNzYyMzgyNDcwLCJleHAiOjE3NjI0Njg4NzB9.AbxGE_OYLgx-kKKQy0xlqidh4eG_A5j6UrxVBDa3_5U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/orders/my",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders",
+						"my"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/orders/c446c264-568b-4f35-a614-e65408f5d1d0/pay",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3OTU4ZDFhYy1iYTk4LTExZjAtYjUxMS0wMDE1NWRkYmUwOTYiLCJyb2xlIjoiUk9MRV9VU0VSIiwiaWF0IjoxNzYyMzgyNDcwLCJleHAiOjE3NjI0Njg4NzB9.AbxGE_OYLgx-kKKQy0xlqidh4eG_A5j6UrxVBDa3_5U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/orders/c446c264-568b-4f35-a614-e65408f5d1d0/pay",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders",
+						"c446c264-568b-4f35-a614-e65408f5d1d0",
+						"pay"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/analytics/top5-users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3OTU4YzdlZS1iYTk4LTExZjAtYjUxMS0wMDE1NWRkYmUwOTYiLCJyb2xlIjoiUk9MRV9BRE1JTiIsImlhdCI6MTc2MjM4NDkxMSwiZXhwIjoxNzYyNDcxMzExfQ.w2Ux4UBaHw4N1PYkaHKoqp1rggXpBJQofgS1CTAL5Ko",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/analytics/top5-users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"analytics",
+						"top5-users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/analytics/avg-ticket",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3OTU4YzdlZS1iYTk4LTExZjAtYjUxMS0wMDE1NWRkYmUwOTYiLCJyb2xlIjoiUk9MRV9BRE1JTiIsImlhdCI6MTc2MjM4NDkxMSwiZXhwIjoxNzYyNDcxMzExfQ.w2Ux4UBaHw4N1PYkaHKoqp1rggXpBJQofgS1CTAL5Ko",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/analytics/avg-ticket",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"analytics",
+						"avg-ticket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/analytics/revenue/2025/11",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3OTU4YzdlZS1iYTk4LTExZjAtYjUxMS0wMDE1NWRkYmUwOTYiLCJyb2xlIjoiUk9MRV9BRE1JTiIsImlhdCI6MTc2MjM4NDkxMSwiZXhwIjoxNzYyNDcxMzExfQ.w2Ux4UBaHw4N1PYkaHKoqp1rggXpBJQofgS1CTAL5Ko",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/analytics/revenue/2025/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"analytics",
+						"revenue",
+						"2025",
+						"11"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
