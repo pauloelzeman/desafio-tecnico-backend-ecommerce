@@ -1,5 +1,3 @@
-# 🚀 Desafio Técnico — Desenvolvedor Back-End Pleno
-
 Aplicação
 **Spring Boot (Java 17)** com autenticação JWT, CRUD de produtos, criação de pedidos com fluxo de pagamento e consultas analíticas otimizadas.
 
